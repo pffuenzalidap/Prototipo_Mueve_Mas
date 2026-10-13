@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Instituto Caminar | Prevención de Caídas y Kinesiología Digital</title>
+  <title>Mueve Más | Prevención de Caídas y Kinesiología Digital</title>
   
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230284c7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M10.2 3.2a1.8 1.8 0 0 0-2.4.9l-3.3 6.9a2 2 0 0 0 .5 2.5l2.4 1.8a2 2 0 0 0 2.8-.3l4.3-5.5a1.8 1.8 0 0 0-.4-2.5l-3.9-3.8Z'/><path d='M13.8 20.8a1.8 1.8 0 0 0 2.4-.9l3.3-6.9a2 2 0 0 0-.5-2.5l-2.4-1.8a2 2 0 0 0-2.8.3l-4.3 5.5a1.8 1.8 0 0 0 .4 2.5l3.9 3.8Z'/></svg>"/>
 
@@ -14,7 +14,7 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   
   <!-- Enlace a estilos CSS externos -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <script>
     tailwind.config = {
@@ -36,23 +36,23 @@
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
     <div class="max-w-[1440px] mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
       
-      <a href="#" onclick="showSection('landing')" class="flex items-center gap-3 group shrink-0">
+      <a href="#" onclick="goToLanding(); return false;" class="flex items-center gap-3 group shrink-0">
         <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-tr from-primary-600 to-mint-500 flex items-center justify-center text-white shadow-md shadow-primary-500/20 group-hover:scale-105 transition-transform">
           <i data-lucide="footprints" class="w-6 h-6"></i>
         </div>
         <div class="flex flex-col justify-center">
           <div class="flex items-center gap-1.5 leading-none">
-            <span class="text-xl sm:text-2xl font-black tracking-tight text-slate-900">Instituto<span class="text-primary-600">Caminar</span></span>
+            <span class="text-xl sm:text-2xl font-black tracking-tight text-slate-900">Mueve<span class="text-primary-600">Más+</span></span>
           </div>
-          <span class="hidden sm:block text-[11px] font-medium text-slate-500 tracking-tight mt-1 leading-none">Prevención y bienestar</span>
+          <span class="hidden sm:block text-[11px] font-medium text-slate-500 tracking-tight mt-1 leading-none">Prevención de Caídas y Kinesiología Digital</span>
         </div>
       </a>
 
       <nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-semibold text-slate-700">
-        <a href="#como-funciona" onclick="showSection('landing')" class="hover:text-primary-600 transition-colors">¿Cómo Funciona?</a>
-        <a href="#servicios" onclick="showSection('landing')" class="hover:text-primary-600 transition-colors">Servicios</a>
-        <a href="#quienes-somos" onclick="showSection('landing')" class="hover:text-primary-600 transition-colors">Quiénes Somos</a>
-        <a href="#cursos" onclick="showSection('landing')" class="bg-amber-100 text-amber-800 px-3 py-1.5 rounded-lg hover:bg-amber-200 transition-colors flex items-center gap-1.5">
+        <a href="#como-funciona" onclick="goToLanding('como-funciona'); return false;" class="hover:text-primary-600 transition-colors">¿Cómo Funciona?</a>
+        <a href="#servicios" onclick="goToLanding('servicios'); return false;" class="hover:text-primary-600 transition-colors">Servicios</a>
+        <a href="#quienes-somos" onclick="goToLanding('quienes-somos'); return false;" class="hover:text-primary-600 transition-colors">Quiénes Somos</a>
+        <a href="#cursos" onclick="goToLanding('cursos'); return false;" class="bg-amber-100 text-amber-800 px-3 py-1.5 rounded-lg hover:bg-amber-200 transition-colors flex items-center gap-1.5">
           <i data-lucide="graduation-cap" class="w-4 h-4"></i> Academia
         </a>
       </nav>
@@ -87,10 +87,10 @@
     </div>
 
     <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 py-4 space-y-3 shadow-xl absolute w-full z-50">
-      <a href="#como-funciona" onclick="toggleMobileMenu(); showSection('landing')" class="block font-semibold text-slate-700 p-3 bg-slate-50 rounded-lg">¿Cómo Funciona?</a>
-      <a href="#servicios" onclick="toggleMobileMenu(); showSection('landing')" class="block font-semibold text-slate-700 p-3 bg-slate-50 rounded-lg">Servicios Médicos</a>
-      <a href="#quienes-somos" onclick="toggleMobileMenu(); showSection('landing')" class="block font-semibold text-slate-700 p-3 bg-slate-50 rounded-lg">Quiénes Somos</a>
-      <a href="#cursos" onclick="toggleMobileMenu(); showSection('landing')" class="block font-bold text-amber-800 p-3 bg-amber-50 rounded-lg flex items-center gap-2"><i data-lucide="graduation-cap" class="w-5 h-5"></i> Academia Caminar</a>
+      <a href="#como-funciona" onclick="toggleMobileMenu(); goToLanding('como-funciona'); return false;" class="block font-semibold text-slate-700 p-3 bg-slate-50 rounded-lg">¿Cómo Funciona?</a>
+      <a href="#servicios" onclick="toggleMobileMenu(); goToLanding('servicios'); return false;" class="block font-semibold text-slate-700 p-3 bg-slate-50 rounded-lg">Servicios Médicos</a>
+      <a href="#quienes-somos" onclick="toggleMobileMenu(); goToLanding('quienes-somos'); return false;" class="block font-semibold text-slate-700 p-3 bg-slate-50 rounded-lg">Quiénes Somos</a>
+      <a href="#cursos" onclick="toggleMobileMenu(); goToLanding('cursos'); return false;" class="block font-bold text-amber-800 p-3 bg-amber-50 rounded-lg flex items-center gap-2"><i data-lucide="graduation-cap" class="w-5 h-5"></i> Academia Caminar</a>
       
       <div class="border-t border-slate-200 pt-3 mt-3 space-y-2">
         <button onclick="toggleMobileMenu(); openPatientLogin()" class="w-full text-left font-bold text-slate-700 bg-slate-100 p-3 rounded-lg flex items-center gap-2">
@@ -436,7 +436,7 @@
                 <p class="text-sm text-slate-600 mb-4 flex-1">Aprende ejercicios diarios para evitar la rigidez matutina sin equipos especiales.</p>
                 <div class="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
                   <span class="font-black text-lg text-slate-900">$15.000</span>
-                  <button class="text-primary-600 font-bold text-sm hover:underline">Ver y Comprar →</button>
+                  <button type="button" onclick="openCoursePurchase('Movilidad Segura en Casa', '$15.000')" class="text-primary-600 font-bold text-sm hover:underline">Ver y Comprar →</button>
                 </div>
               </div>
             </div>
@@ -451,7 +451,7 @@
                 <p class="text-sm text-slate-600 mb-4 flex-1">Técnicas ergonómicas para trasladar y asistir sin lastimar tu espalda ni al paciente.</p>
                 <div class="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
                   <span class="font-black text-lg text-slate-900">$25.000</span>
-                  <button class="text-primary-600 font-bold text-sm hover:underline">Ver y Comprar →</button>
+                  <button type="button" onclick="openCoursePurchase('Manejo Físico del Adulto Mayor', '$25.000')" class="text-primary-600 font-bold text-sm hover:underline">Ver y Comprar →</button>
                 </div>
               </div>
             </div>
@@ -466,7 +466,7 @@
                 <p class="text-sm text-slate-600 mb-4 flex-1">Prescripción de ejercicio y dosificación de cargas en el adulto mayor frágil.</p>
                 <div class="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
                   <span class="font-black text-lg text-slate-900">$45.000</span>
-                  <button class="text-primary-600 font-bold text-sm hover:underline">Ver y Comprar →</button>
+                  <button type="button" onclick="openCoursePurchase('Actualización en Sarcopenia', '$45.000')" class="text-primary-600 font-bold text-sm hover:underline">Ver y Comprar →</button>
                 </div>
               </div>
             </div>
@@ -481,31 +481,31 @@
               <h2 class="text-xs font-bold uppercase tracking-widest text-primary-600 mb-2">Centro de Información</h2>
               <h3 class="text-3xl font-black text-slate-900">Artículos y Guías Gratuitas</h3>
             </div>
-            <button class="hidden sm:block text-primary-600 font-bold hover:underline">Ver todos los artículos →</button>
+            <button type="button" onclick="goToLanding('blog')" class="hidden sm:block text-primary-600 font-bold hover:underline">Ver todos los artículos →</button>
           </div>
           
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="#" class="group block">
+            <button type="button" onclick="openArticle('Guía para adaptar el baño y evitar caídas en casa', 'Retira alfombras sueltas, coloca una barra de apoyo junto al inodoro y usa una silla o banco en la ducha. La luz debe quedar encendida de noche en el pasillo al baño. Estos cambios simples bajan mucho el riesgo de resbalones.')" class="group block text-left">
               <div class="rounded-2xl overflow-hidden mb-4 h-48 bg-slate-100">
                 <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform" alt="Casa segura" />
               </div>
               <span class="text-xs font-bold text-mint-600 uppercase">Prevención</span>
               <h4 class="font-bold text-lg text-slate-900 mt-1 group-hover:text-primary-600 transition-colors">Guía para adaptar el baño y evitar caídas en casa</h4>
-            </a>
-            <a href="#" class="group block">
+            </button>
+            <button type="button" onclick="openArticle('¿Cómo elegir el bastón adecuado para la artrosis?', 'El bastón se usa en el lado contrario a la rodilla o cadera que duele. La altura correcta llega a la muñeca con el brazo relajado. Un mango grueso y antideslizante ayuda si hay artrosis en las manos. Un kinesiólogo puede revisar la marcha y el apoyo.')" class="group block text-left">
               <div class="rounded-2xl overflow-hidden mb-4 h-48 bg-slate-100">
                 <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform" alt="Caminar" />
               </div>
               <span class="text-xs font-bold text-primary-600 uppercase">Salud Articular</span>
               <h4 class="font-bold text-lg text-slate-900 mt-1 group-hover:text-primary-600 transition-colors">¿Cómo elegir el bastón adecuado para la artrosis?</h4>
-            </a>
-            <a href="#" class="group block">
+            </button>
+            <button type="button" onclick="openArticle('Beneficios del ejercicio de fuerza después de los 70', 'Entrenar fuerza 2 o 3 veces por semana ayuda a levantarse de la silla, subir un peldaño y mantener el equilibrio. Se puede empezar sentado, con el propio peso o bandas elásticas, siempre con movimientos lentos y pausas. La clave es la constancia, no el esfuerzo extremo.')" class="group block text-left">
               <div class="rounded-2xl overflow-hidden mb-4 h-48 bg-slate-100">
                 <img src="https://images.unsplash.com/photo-1513159446162-54eb8bdaa79b?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform" alt="Ejercicio" />
               </div>
               <span class="text-xs font-bold text-amber-600 uppercase">Bienestar</span>
               <h4 class="font-bold text-lg text-slate-900 mt-1 group-hover:text-primary-600 transition-colors">Beneficios del ejercicio de fuerza después de los 70</h4>
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -587,122 +587,170 @@
     <!-- ==========================================
          SECCIÓN 2: CUESTIONARIO MÉDICO
          ========================================== -->
-    <div id="section-questionnaire" class="hidden py-10 sm:py-16 bg-slate-50 min-h-[85vh]">
-      <!-- (El contenido interno del formulario se mantiene igual a la versión separada en app.js) -->
+    <div id="section-questionnaire" class="hidden py-8 sm:py-14 bg-slate-50 min-h-[85vh]">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl relative">
-          
+        <div class="flex items-center justify-between mb-4">
+          <p class="text-base sm:text-lg font-semibold text-slate-600">Evaluación gratuita</p>
+          <button type="button" onclick="goToLanding()" class="text-base font-bold text-slate-600 hover:text-slate-900 px-3 py-2 rounded-xl hover:bg-slate-200">Salir</button>
+        </div>
+
+        <div class="bg-white rounded-3xl p-5 sm:p-10 border border-slate-200 shadow-xl relative">
           <div class="mb-8">
-            <div class="flex items-center justify-between text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
-              <span id="stepIndicator">Paso 1 de 3</span>
+            <div class="flex items-center justify-between text-base font-bold text-slate-600 mb-3">
+              <span id="stepIndicator">Pregunta 1 de 5</span>
+              <span id="stepPercent" class="text-primary-700">20%</span>
             </div>
-            <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
-              <div id="progressBar" class="bg-primary-600 h-full rounded-full transition-all duration-300 w-1/3"></div>
+            <div class="w-full bg-slate-100 h-3.5 rounded-full overflow-hidden">
+              <div id="progressBar" class="bg-primary-600 h-full rounded-full transition-all duration-300 w-1/5"></div>
             </div>
           </div>
 
           <form id="kineForm" onsubmit="event.preventDefault(); nextStepForm();">
-            
-            <div id="formStep1" class="space-y-6">
-              <h3 class="text-2xl font-black text-slate-900">¿Cuál es tu objetivo principal?</h3>
-              <p class="text-sm text-slate-600">Ayúdanos a entender qué buscas para orientar mejor a nuestros especialistas.</p>
-              
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <label class="relative flex items-center p-4 rounded-2xl border-2 border-slate-200 cursor-pointer has-[:checked]:border-primary-600 has-[:checked]:bg-primary-50 transition-all">
-                  <input type="radio" name="consultaTipo" value="dolor" checked class="sr-only" onchange="updateFormBranch()" />
-                  <div class="flex gap-3 items-center">
-                    <div class="w-10 h-10 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center"><i data-lucide="activity" class="w-5 h-5"></i></div>
+
+            <div id="formStep1" class="space-y-5">
+              <h3 class="text-2xl sm:text-3xl font-black text-slate-900 leading-snug">¿Cuál es tu objetivo principal?</h3>
+              <p class="text-lg text-slate-600">Toca la tarjeta que más te represente. Luego pulsa Continuar.</p>
+              <div class="grid grid-cols-1 gap-4">
+                <label class="q-card">
+                  <input type="radio" name="consultaTipo" value="dolor" class="sr-only" onchange="updateFormBranch()" />
+                  <div class="flex gap-4 items-center">
+                    <div class="q-icon bg-rose-100 text-rose-700"><i data-lucide="activity" class="w-8 h-8"></i></div>
                     <div>
-                      <h4 class="font-bold text-sm text-slate-900">Tratar un dolor o lesión</h4>
-                      <p class="text-xs text-slate-500">Rehabilitación específica</p>
+                      <h4 class="font-bold text-xl text-slate-900">Quiero tratar un dolor</h4>
+                      <p class="text-base text-slate-600 mt-1">Rodilla, cadera, espalda u otra molestia que limita el movimiento.</p>
                     </div>
                   </div>
                 </label>
-                <label class="relative flex items-center p-4 rounded-2xl border-2 border-slate-200 cursor-pointer has-[:checked]:border-primary-600 has-[:checked]:bg-primary-50 transition-all">
+                <label class="q-card">
                   <input type="radio" name="consultaTipo" value="prevencion" class="sr-only" onchange="updateFormBranch()" />
-                  <div class="flex gap-3 items-center">
-                    <div class="w-10 h-10 rounded-full bg-mint-100 text-mint-600 flex items-center justify-center"><i data-lucide="shield-check" class="w-5 h-5"></i></div>
+                  <div class="flex gap-4 items-center">
+                    <div class="q-icon bg-mint-100 text-mint-700"><i data-lucide="shield-check" class="w-8 h-8"></i></div>
                     <div>
-                      <h4 class="font-bold text-sm text-slate-900">Estar saludable / Prevención</h4>
-                      <p class="text-xs text-slate-500">Evitar caídas, ganar fuerza</p>
+                      <h4 class="font-bold text-xl text-slate-900">Quiero sentirme más seguro al caminar</h4>
+                      <p class="text-base text-slate-600 mt-1">Prevenir caídas, ganar equilibrio y fuerza para el día a día.</p>
                     </div>
                   </div>
                 </label>
               </div>
             </div>
 
-            <div id="formStep2A" class="hidden space-y-6">
-              <h3 class="text-2xl font-black text-slate-900">¿Dónde se concentra la molestia?</h3>
+            <div id="formStep2A" class="hidden space-y-5">
+              <h3 class="text-2xl sm:text-3xl font-black text-slate-900 leading-snug">¿Dónde sientes el dolor o la molestia?</h3>
+              <p class="text-lg text-slate-600">Elige la zona que más te preocupa ahora.</p>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <label class="relative flex items-center p-4 rounded-2xl border-2 border-slate-200 cursor-pointer has-[:checked]:border-primary-600 has-[:checked]:bg-primary-50">
-                  <input type="radio" name="bodyZone" value="Piernas" checked class="sr-only" />
-                  <div class="flex gap-3 items-center">
-                    <span class="text-2xl">🦴</span>
-                    <div>
-                      <h4 class="font-bold text-sm">Rodilla / Cadera / Piernas</h4>
-                    </div>
-                  </div>
-                </label>
-                <label class="relative flex items-center p-4 rounded-2xl border-2 border-slate-200 cursor-pointer has-[:checked]:border-primary-600 has-[:checked]:bg-primary-50">
-                  <input type="radio" name="bodyZone" value="Espalda" class="sr-only" />
-                  <div class="flex gap-3 items-center">
-                    <span class="text-2xl">⚡</span>
-                    <div>
-                      <h4 class="font-bold text-sm">Columna / Espalda</h4>
-                    </div>
-                  </div>
-                </label>
+                <label class="q-card"><input type="radio" name="bodyZone" value="Rodilla" class="sr-only" /><span class="q-choice">Rodilla</span><span class="q-help">Al subir, bajar o doblar</span></label>
+                <label class="q-card"><input type="radio" name="bodyZone" value="Cadera" class="sr-only" /><span class="q-choice">Cadera</span><span class="q-help">Al caminar o levantarte</span></label>
+                <label class="q-card"><input type="radio" name="bodyZone" value="Espalda baja" class="sr-only" /><span class="q-choice">Espalda baja</span><span class="q-help">Lumbago o rigidez</span></label>
+                <label class="q-card"><input type="radio" name="bodyZone" value="Cuello u hombros" class="sr-only" /><span class="q-choice">Cuello u hombros</span><span class="q-help">Al girar o levantar brazos</span></label>
+                <label class="q-card sm:col-span-2"><input type="radio" name="bodyZone" value="Varias zonas" class="sr-only" /><span class="q-choice">Varias zonas a la vez</span><span class="q-help">Duele en más de un lugar</span></label>
               </div>
             </div>
 
-            <div id="formStep2B" class="hidden space-y-6">
-              <h3 class="text-2xl font-black text-slate-900">¿Qué te gustaría mejorar?</h3>
-              <div class="grid grid-cols-1 gap-3">
-                <label class="flex items-center gap-3 p-4 rounded-xl border border-slate-200 bg-white cursor-pointer hover:bg-slate-50">
-                  <input type="checkbox" checked class="w-5 h-5 text-primary-600 rounded" />
-                  <span class="text-sm font-medium text-slate-800">Mejorar mi equilibrio para recuperar confianza al caminar.</span>
-                </label>
-                <label class="flex items-center gap-3 p-4 rounded-xl border border-slate-200 bg-white cursor-pointer hover:bg-slate-50">
-                  <input type="checkbox" class="w-5 h-5 text-primary-600 rounded" />
-                  <span class="text-sm font-medium text-slate-800">Tener más fuerza para levantarme de sillas sin ayuda.</span>
-                </label>
+            <div id="formStep2B" class="hidden space-y-5">
+              <h3 class="text-2xl sm:text-3xl font-black text-slate-900 leading-snug">En el último año, ¿has tenido una caída?</h3>
+              <p class="text-lg text-slate-600">También cuenta si casi te caes y te agarraste a tiempo.</p>
+              <div class="grid grid-cols-1 gap-4">
+                <label class="q-card"><input type="radio" name="caidas" value="No, ninguna" class="sr-only" /><span class="q-choice">No, ninguna</span></label>
+                <label class="q-card"><input type="radio" name="caidas" value="Casi me caigo" class="sr-only" /><span class="q-choice">No me caí, pero sentí que iba a caer</span></label>
+                <label class="q-card"><input type="radio" name="caidas" value="Una caída" class="sr-only" /><span class="q-choice">Sí, una vez</span></label>
+                <label class="q-card"><input type="radio" name="caidas" value="Más de una caída" class="sr-only" /><span class="q-choice">Sí, más de una vez</span></label>
               </div>
             </div>
 
-            <div id="formStep3" class="hidden space-y-6">
-              <h3 class="text-2xl font-black text-slate-900">Datos para enviarte el diagnóstico</h3>
-              <p class="text-sm text-slate-600">No pedimos datos sensibles en esta etapa. Es 100% gratuito.</p>
-              
+            <div id="formStep3A" class="hidden space-y-5">
+              <h3 class="text-2xl sm:text-3xl font-black text-slate-900 leading-snug">En un día común, ¿cuánto te molesta ese dolor?</h3>
+              <p class="text-lg text-slate-600">Toca el recuadro que mejor describe cómo te sientes.</p>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div class="sm:col-span-2">
-                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">¿Quién responde?</label>
-                  <select class="w-full px-4 py-3 rounded-xl border border-slate-300 outline-none focus:ring-2 focus:ring-primary-500">
-                    <option>Soy el Paciente</option>
-                    <option>Soy Familiar / Cuidador</option>
-                  </select>
+                <label class="q-card"><input type="radio" name="intensidad" value="Poco" class="sr-only" /><span class="q-choice">Poco</span><span class="q-help">Lo noto, pero sigo mi día</span></label>
+                <label class="q-card"><input type="radio" name="intensidad" value="Regular" class="sr-only" /><span class="q-choice">Regular</span><span class="q-help">Me hace ir más lento</span></label>
+                <label class="q-card"><input type="radio" name="intensidad" value="Bastante" class="sr-only" /><span class="q-choice">Bastante</span><span class="q-help">Evito algunos movimientos</span></label>
+                <label class="q-card"><input type="radio" name="intensidad" value="Mucho" class="sr-only" /><span class="q-choice">Mucho</span><span class="q-help">Me cuesta hacer lo de siempre</span></label>
+              </div>
+            </div>
+
+            <div id="formStep3B" class="hidden space-y-5">
+              <h3 class="text-2xl sm:text-3xl font-black text-slate-900 leading-snug">Cuando caminas en casa, ¿usas algún apoyo?</h3>
+              <p class="text-lg text-slate-600">Elige lo que usas la mayor parte del tiempo.</p>
+              <div class="grid grid-cols-1 gap-4">
+                <label class="q-card"><input type="radio" name="apoyo" value="Sin apoyo" class="sr-only" /><span class="q-choice">Camino sin apoyo</span></label>
+                <label class="q-card"><input type="radio" name="apoyo" value="Muebles o paredes" class="sr-only" /><span class="q-choice">Me apoyo en muebles o paredes</span></label>
+                <label class="q-card"><input type="radio" name="apoyo" value="Bastón" class="sr-only" /><span class="q-choice">Uso bastón</span></label>
+                <label class="q-card"><input type="radio" name="apoyo" value="Andador o ayuda de otra persona" class="sr-only" /><span class="q-choice">Uso andador o me acompaña alguien</span></label>
+              </div>
+            </div>
+
+            <div id="formStep4A" class="hidden space-y-5">
+              <h3 class="text-2xl sm:text-3xl font-black text-slate-900 leading-snug">¿Qué movimiento se te hace más difícil?</h3>
+              <p class="text-lg text-slate-600">Esto ayuda al kinesiólogo a pensar tu pauta.</p>
+              <div class="grid grid-cols-1 gap-4">
+                <label class="q-card"><input type="radio" name="limitacion" value="Levantarme de una silla" class="sr-only" /><span class="q-choice">Levantarme de una silla o del sillón</span></label>
+                <label class="q-card"><input type="radio" name="limitacion" value="Subir o bajar un peldaño" class="sr-only" /><span class="q-choice">Subir o bajar un peldaño</span></label>
+                <label class="q-card"><input type="radio" name="limitacion" value="Caminar varios minutos" class="sr-only" /><span class="q-choice">Caminar varios minutos seguidos</span></label>
+                <label class="q-card"><input type="radio" name="limitacion" value="Agacharme o vestirme" class="sr-only" /><span class="q-choice">Agacharme, vestirme o ponerme los zapatos</span></label>
+              </div>
+            </div>
+
+            <div id="formStep4B" class="hidden space-y-5">
+              <h3 class="text-2xl sm:text-3xl font-black text-slate-900 leading-snug">¿Puedes levantarte de una silla sin usar las manos?</h3>
+              <p class="text-lg text-slate-600">Es una prueba simple de fuerza de piernas. Responde con calma, como te sientes habitualmente.</p>
+              <div class="grid grid-cols-1 gap-4">
+                <label class="q-card"><input type="radio" name="silla" value="Sí, sin apoyo" class="sr-only" /><span class="q-choice">Sí, me levanto sin apoyarme</span></label>
+                <label class="q-card"><input type="radio" name="silla" value="Con dificultad" class="sr-only" /><span class="q-choice">Sí, pero me cuesta o me impulso</span></label>
+                <label class="q-card"><input type="radio" name="silla" value="Necesito apoyarme o ayuda" class="sr-only" /><span class="q-choice">Necesito las manos, el apoyabrazos o a alguien</span></label>
+              </div>
+            </div>
+
+            <div id="formStep5" class="hidden space-y-5">
+              <h3 class="text-2xl sm:text-3xl font-black text-slate-900 leading-snug">¿A quién enviamos el diagnóstico?</h3>
+              <p class="text-lg text-slate-600">Solo pedimos un nombre y un correo. Es gratis y no pedimos datos clínicos sensibles.</p>
+              <div class="space-y-5">
+                <div>
+                  <span class="block text-lg font-bold text-slate-800 mb-3">¿Quién está respondiendo?</span>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <label class="q-card"><input type="radio" name="evalRole" value="Paciente" class="sr-only" /><span class="q-choice">Soy yo, el paciente</span></label>
+                    <label class="q-card"><input type="radio" name="evalRole" value="Familiar" class="sr-only" /><span class="q-choice">Soy familiar o cuidador</span></label>
+                  </div>
                 </div>
                 <div>
-                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nombre (o apodo)</label>
-                  <input type="text" id="evalName" required placeholder="Ej: María" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-primary-500" />
+                  <label for="evalName" class="block text-lg font-bold text-slate-800 mb-2">Nombre o apodo</label>
+                  <input type="text" id="evalName" autocomplete="name" placeholder="Ejemplo: María" class="input-senior" />
                 </div>
                 <div>
-                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Correo Electrónico</label>
-                  <input type="email" required placeholder="ejemplo@correo.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-primary-500" />
+                  <label for="evalEmail" class="block text-lg font-bold text-slate-800 mb-2">Correo electrónico</label>
+                  <input type="email" id="evalEmail" autocomplete="email" placeholder="ejemplo@correo.com" class="input-senior" />
                 </div>
               </div>
             </div>
 
-            <div class="flex items-center justify-between pt-6 border-t border-slate-200 mt-8">
-              <button type="button" id="prevStepBtn" onclick="prevStepForm()" class="hidden px-5 py-2.5 rounded-xl border border-slate-300 font-bold text-slate-700 hover:bg-slate-100 text-sm">
-                ← Volver
+            <p id="formHint" class="hidden mt-5 text-lg font-semibold text-amber-800 bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3" role="alert"></p>
+
+            <div class="flex flex-col-reverse sm:flex-row items-stretch sm:items-center gap-3 pt-8 border-t border-slate-200 mt-8">
+              <button type="button" id="prevStepBtn" onclick="prevStepForm()" class="hidden px-6 py-4 rounded-2xl border-2 border-slate-300 font-bold text-lg text-slate-700 hover:bg-slate-100">
+                Volver
               </button>
-              <div class="ml-auto">
-                <button type="submit" id="nextStepBtn" class="bg-primary-600 hover:bg-primary-700 text-white font-bold px-6 py-3 rounded-xl shadow-lg transition-all flex items-center gap-2">
-                  <span>Siguiente</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                </button>
-              </div>
+              <button type="submit" id="nextStepBtn" class="sm:ml-auto bg-primary-600 hover:bg-primary-700 text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-lg transition-all flex items-center justify-center gap-2 min-h-[60px]">
+                <span>Continuar</span> <i data-lucide="arrow-right" class="w-5 h-5"></i>
+              </button>
             </div>
           </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="section-eval-result" class="hidden py-10 sm:py-16 bg-slate-50 min-h-[85vh]">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl">
+          <div class="w-16 h-16 rounded-2xl bg-mint-100 text-mint-700 flex items-center justify-center mb-5">
+            <i data-lucide="mail-check" class="w-8 h-8"></i>
+          </div>
+          <h2 class="text-3xl font-black text-slate-900 leading-snug">Recibimos tu evaluación</h2>
+          <p id="evalResultLead" class="text-lg text-slate-600 mt-4 leading-relaxed"></p>
+          <ul id="evalResultList" class="mt-6 space-y-3 text-lg text-slate-800"></ul>
+          <p class="text-lg text-slate-600 mt-6">Un kinesiólogo revisará tus respuestas y te enviará una orientación inicial a tu correo. En este prototipo puedes simular ese siguiente paso ahora.</p>
+          <div class="flex flex-col sm:flex-row gap-3 mt-8">
+            <button type="button" onclick="simulateEmailLink()" class="bg-primary-600 hover:bg-primary-700 text-white font-bold text-lg px-6 py-4 rounded-2xl">Simular diagnóstico en el correo</button>
+            <button type="button" onclick="goToLanding()" class="border-2 border-slate-300 font-bold text-lg px-6 py-4 rounded-2xl text-slate-700 hover:bg-slate-50">Volver al inicio</button>
+          </div>
         </div>
       </div>
     </div>
@@ -741,6 +789,9 @@
           <div class="lg:col-span-5 space-y-6">
             <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm">
               <h3 class="text-lg font-bold text-slate-900 mb-4 border-b pb-3">2. Selecciona tu Plan</h3>
+              <label class="q-card mb-3 block"><input type="radio" name="plan" value="4" class="sr-only" checked /><span class="q-choice">4 sesiones — $48.000</span></label>
+              <label class="q-card mb-3 block"><input type="radio" name="plan" value="8" class="sr-only" /><span class="q-choice">8 sesiones — $86.000</span></label>
+              <label class="q-card mb-3 block"><input type="radio" name="plan" value="12" class="sr-only" /><span class="q-choice">12 sesiones — $120.000</span></label>
               <div class="mt-6 pt-4 border-t border-slate-200">
                 <button onclick="simulatePayment()" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 rounded-xl shadow-lg transition-all flex justify-center items-center gap-2">
                   <i data-lucide="lock" class="w-4 h-4"></i> Pagar Seguro (Webpay)
@@ -790,6 +841,75 @@
        ========================================== -->
   <!-- (Para mantener la lectura fácil, los modales de login se mantienen iguales. Aquí incluyo el Footer y Script básico) -->
 
+  <div id="loginPatientModal" class="app-modal hidden" onclick="backdropClose(event, 'loginPatientModal')">
+    <div class="app-modal-card" onclick="event.stopPropagation()">
+      <h4 class="font-bold text-2xl text-slate-900 mb-2">Portal Paciente</h4>
+      <p class="text-base text-slate-600 mb-5">En el prototipo puedes entrar sin una cuenta real.</p>
+      <label class="block text-base font-bold mb-2">Correo</label>
+      <input type="email" id="loginPatientEmail" class="input-senior mb-4" placeholder="tu@correo.com" />
+      <div class="flex flex-col sm:flex-row gap-3">
+        <button type="button" onclick="enterPortal('portal')" class="bg-primary-600 text-white font-bold text-lg px-5 py-3 rounded-2xl">Entrar</button>
+        <button type="button" onclick="closeAppModal('loginPatientModal')" class="border-2 border-slate-300 font-bold text-lg px-5 py-3 rounded-2xl">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="loginSpecialistModal" class="app-modal hidden" onclick="backdropClose(event, 'loginSpecialistModal')">
+    <div class="app-modal-card" onclick="event.stopPropagation()">
+      <h4 class="font-bold text-2xl text-slate-900 mb-2">Portal Especialistas</h4>
+      <p class="text-base text-slate-600 mb-5">Acceso de demostración para kinesiólogos.</p>
+      <label class="block text-base font-bold mb-2">Correo profesional</label>
+      <input type="email" class="input-senior mb-4" placeholder="kine@institutocaminar.cl" />
+      <div class="flex flex-col sm:flex-row gap-3">
+        <button type="button" onclick="enterPortal('kine-admin')" class="bg-primary-600 text-white font-bold text-lg px-5 py-3 rounded-2xl">Entrar</button>
+        <button type="button" onclick="closeAppModal('loginSpecialistModal')" class="border-2 border-slate-300 font-bold text-lg px-5 py-3 rounded-2xl">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="loginAcademyModal" class="app-modal hidden" onclick="backdropClose(event, 'loginAcademyModal')">
+    <div class="app-modal-card" onclick="event.stopPropagation()">
+      <h4 class="font-bold text-2xl text-slate-900 mb-2">Portal Alumnos</h4>
+      <p class="text-base text-slate-600 mb-5">Entra para ver los cursos de la Academia Caminar.</p>
+      <label class="block text-base font-bold mb-2">Correo</label>
+      <input type="email" class="input-senior mb-4" placeholder="alumno@correo.com" />
+      <div class="flex flex-col sm:flex-row gap-3">
+        <button type="button" onclick="enterPortal('academy-portal')" class="bg-amber-600 text-white font-bold text-lg px-5 py-3 rounded-2xl">Entrar</button>
+        <button type="button" onclick="closeAppModal('loginAcademyModal')" class="border-2 border-slate-300 font-bold text-lg px-5 py-3 rounded-2xl">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="agendaModal" class="app-modal hidden" onclick="backdropClose(event, 'agendaModal')">
+    <div class="app-modal-card" onclick="event.stopPropagation()">
+      <h4 class="font-bold text-2xl text-slate-900 mb-2">Kinesiología a domicilio</h4>
+      <p class="text-base text-slate-600 mb-5">Déjanos tus datos y te confirmamos disponibilidad.</p>
+      <label class="block text-base font-bold mb-2">Nombre</label>
+      <input type="text" id="agendaName" class="input-senior mb-4" placeholder="Nombre completo" />
+      <label class="block text-base font-bold mb-2">Teléfono</label>
+      <input type="tel" id="agendaPhone" class="input-senior mb-4" placeholder="+56 9 ..." />
+      <label class="block text-base font-bold mb-2">Comuna</label>
+      <input type="text" id="agendaComuna" class="input-senior mb-5" placeholder="Ej: Ñuñoa" />
+      <p id="agendaHint" class="hidden text-base font-semibold text-amber-800 bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3 mb-4"></p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <button type="button" onclick="submitAgenda()" class="bg-primary-600 text-white font-bold text-lg px-5 py-3 rounded-2xl">Enviar solicitud</button>
+        <button type="button" onclick="closeAppModal('agendaModal')" class="border-2 border-slate-300 font-bold text-lg px-5 py-3 rounded-2xl">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="courseModal" class="app-modal hidden" onclick="backdropClose(event, 'courseModal')">
+    <div class="app-modal-card" onclick="event.stopPropagation()">
+      <h4 id="courseModalTitle" class="font-bold text-2xl text-slate-900 mb-2">Curso</h4>
+      <p class="text-lg text-slate-600 mb-2">Pago único. Acceso ilimitado en el Portal Alumnos.</p>
+      <p id="courseModalPrice" class="text-2xl font-black text-slate-900 mb-6"></p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <button type="button" onclick="confirmCoursePurchase()" class="bg-primary-600 text-white font-bold text-lg px-5 py-3 rounded-2xl">Pagar y acceder</button>
+        <button type="button" onclick="closeAppModal('courseModal')" class="border-2 border-slate-300 font-bold text-lg px-5 py-3 rounded-2xl">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Modal Video Reproductor -->
   <div id="generalModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
     <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-7 shadow-2xl border border-slate-200">
@@ -798,7 +918,7 @@
         <button onclick="closeGeneralModal()" class="text-slate-400 hover:text-slate-700"><i data-lucide="x" class="w-5 h-5"></i></button>
       </div>
       <div class="space-y-4">
-        <div class="w-full h-40 bg-slate-900 rounded-2xl flex flex-col items-center justify-center text-white border border-slate-200 p-4 text-center relative overflow-hidden">
+        <div id="modalMedia" class="w-full h-40 bg-slate-900 rounded-2xl flex flex-col items-center justify-center text-white border border-slate-200 p-4 text-center relative overflow-hidden">
           <i data-lucide="play" class="w-12 h-12 text-white mb-2 animate-pulse"></i>
           <span class="text-xs font-semibold">Cargando video de paciente...</span>
         </div>
@@ -825,12 +945,12 @@
         <div>
           <h4 class="text-white font-bold text-lg mb-4">Navegación</h4>
           <ul class="space-y-3 text-base">
-            <li><a href="#" onclick="showSection('landing')" class="hover:text-primary-400 transition-colors">Inicio</a></li>
-            <li><a href="#como-funciona" onclick="showSection('landing')" class="hover:text-primary-400 transition-colors">¿Cómo Funciona?</a></li>
-            <li><a href="#servicios" onclick="showSection('landing')" class="hover:text-primary-400 transition-colors">Servicios Clínicos</a></li>
-            <li><a href="#quienes-somos" onclick="showSection('landing')" class="hover:text-primary-400 transition-colors">Quiénes Somos</a></li>
-            <li><a href="#cursos" onclick="showSection('landing')" class="hover:text-primary-400 transition-colors">Academia Caminar</a></li>
-            <li><a href="#faq" onclick="showSection('landing')" class="hover:text-primary-400 transition-colors">Preguntas Frecuentes</a></li>
+            <li><a href="#" onclick="goToLanding(); return false;" class="hover:text-primary-400 transition-colors">Inicio</a></li>
+            <li><a href="#como-funciona" onclick="goToLanding('como-funciona'); return false;" class="hover:text-primary-400 transition-colors">¿Cómo Funciona?</a></li>
+            <li><a href="#servicios" onclick="goToLanding('servicios'); return false;" class="hover:text-primary-400 transition-colors">Servicios Clínicos</a></li>
+            <li><a href="#quienes-somos" onclick="goToLanding('quienes-somos'); return false;" class="hover:text-primary-400 transition-colors">Quiénes Somos</a></li>
+            <li><a href="#cursos" onclick="goToLanding('cursos'); return false;" class="hover:text-primary-400 transition-colors">Academia Caminar</a></li>
+            <li><a href="#faq" onclick="goToLanding('faq'); return false;" class="hover:text-primary-400 transition-colors">Preguntas Frecuentes</a></li>
           </ul>
         </div>
         <div>

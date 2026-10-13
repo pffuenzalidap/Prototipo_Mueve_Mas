@@ -32,3 +32,91 @@ details > summary {
 details > summary::-webkit-details-marker {
   display: none;
 }
+
+/* Cuestionario y controles grandes (60+) */
+.q-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+  padding: 1.2rem 1.35rem;
+  min-height: 4.75rem;
+  border: 3px solid #e2e8f0;
+  border-radius: 1.25rem;
+  cursor: pointer;
+  background: #fff;
+  transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.q-card:hover {
+  border-color: #7dd3fc;
+}
+
+.q-card.is-selected {
+  border-color: #0284c7;
+  background: #f0f9ff;
+  box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.16);
+}
+
+.q-choice {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #0f172a;
+  line-height: 1.35;
+}
+
+.q-help {
+  font-size: 1.05rem;
+  color: #475569;
+}
+
+.q-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.input-senior {
+  width: 100%;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  padding: 1rem 1.1rem;
+  border-radius: 0.9rem;
+  border: 2px solid #cbd5e1;
+  background: #fff;
+}
+
+.input-senior:focus {
+  outline: none;
+  border-color: #0284c7;
+  box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.2);
+}
+
+.app-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.app-modal.hidden {
+  display: none;
+}
+
+.app-modal-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+  width: 100%;
+  max-width: 32rem;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
